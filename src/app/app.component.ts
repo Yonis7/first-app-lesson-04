@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
-
+import { RouterModule } from '@angular/router'; //Update component 2 use routing
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     HomeComponent,
+    RouterModule
   ],
   template: `
     <main>
@@ -13,7 +14,7 @@ import { HomeComponent } from './home/home.component';
         <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
       </header>
       <section class="content">
-        <app-home></app-home>
+      <router-outlet></router-outlet>
       </section>
     </main>
   `,
